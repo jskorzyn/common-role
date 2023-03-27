@@ -1,2 +1,1 @@
-# common-role
-RHEL server prep role
+# RHEL server prep role
