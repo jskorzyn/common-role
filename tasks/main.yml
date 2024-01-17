@@ -1,7 +1,7 @@
 ---
 - name: Set machine hostname
   ansible.builtin.hostname:
-    name: "{{inventory_hostname | default('change_me')}}.redhat.lab"
+    name: "{{ asible_hostname | default('change_me')}}.jsrh.redhat.lab }}"
     use: systemd
 
 - name: Clear registration settings
@@ -11,9 +11,10 @@
 - name: Register to Sattellite with activation key
   community.general.redhat_subscription:
     state: present
+    server_insecure: true
     force_register: true
-    activationkey: RHEL8
-    org_id: RedHatDemoLab
+    activationkey: RHEL8_preprod
+    org_id: DemoLab
 
 - name: Install Epel
   ansible.builtin.yum:
