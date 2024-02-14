@@ -1,11 +1,7 @@
 ---
 - name: Set machine hostname
   ansible.builtin.hostname:
-<<<<<<< HEAD
-    name: "{{ asible_hostname | default('change_me')}}.jsrh.redhat.lab"
-=======
-    name: "{{inventory_hostname | default('change_me')}}.jsrh.redhat.lab"
->>>>>>> fb2bd8207c79151d6cb6868d499bbfd667313619
+    name: "{{ ansible_hostname | default('change_me') }}.jsrh.redhat.lab"
     use: systemd
 
 - name: Clear registration settings
@@ -24,4 +20,4 @@
   ansible.builtin.yum:
     name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
     state: present
-    disable_gpg_check: yes
+    disable_gpg_check: true
