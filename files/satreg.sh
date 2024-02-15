@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -sS --insecure 'https://satellite.redhat.lab/register?activation_keys=RHEL8_preprod&location_id=4&operatingsystem_id=1&organization_id=1&setup_insights=false&setup_remote_execution=false&update_packages=false' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNSwiaWF0IjoxNzA3OTg2MjYxLCJqdGkiOiJiZDc5ZWE0YzVjZmNhZDQyZWJlYjQ2ODUxNjczNzVmY2M3ODQ5ZWZhODdjMmY1YmMxYjViN2U1M2ViM2JiYmVlIiwic2NvcGUiOiJyZWdpc3RyYXRpb24jZ2xvYmFsIHJlZ2lzdHJhdGlvbiNob3N0In0.cb3HaSTRzpMfo4TzjDWDZHQvhmskPeSAl8PwIDdtXTw'
