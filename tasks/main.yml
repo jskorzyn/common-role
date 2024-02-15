@@ -20,9 +20,13 @@
 - name: Register with Satellite template
   ansible.builtin.shell: |
     curl -sS --insecure 
-    'https://satellite.redhat.lab/register?activation_keys=RHEL8_preprod&force=false&ignore_subman_errors=false&location_id=4&operatingsystem_id=1&organization_id=1&setup_insights=false&update_packages=false' 
-    -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNSwiaWF0IjoxNzA3OTc5MjYyLCJqdGkiOiJiMzljYWZhODhlODk0NmRiZjRiNWJmZTQ5ZGM0YjQ4NjMxYTZhYmY1NGE2OGExMGIzYmY4NDgzZDUwNjUwZmZhIiwiZXhwIjoxNzA3OTkzNjYyLCJzY29wZSI6InJlZ2lzdHJhdGlvbiNnbG9iYWwgcmVnaXN0cmF0aW9uI2hvc3QifQ.-bzw4ALZLuiw_n6eqlCSoRkRSn1k8yxUucdwyHAmE1U' | bash
-    
+    'https://satellite.redhat.lab/register?activation_keys=RHEL8_preprod&force=false&
+    ignore_subman_errors=false&location_id=4&operatingsystem_id=1&
+    organization_id=1&setup_insights=false&update_packages=false' 
+    -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjox
+    NSwiaWF0IjoxNzA3OTc5MjYyLCJqdGkiOiJiMzljYWZhODhlODk0NmRiZjRiNWJmZTQ5ZGM0YjQ4NjMxYTZhYmY1NGE2OGExMGIz
+    YmY4NDgzZDUwNjUwZmZhIiwiZXhwIjoxNzA3OTkzNjYyLCJzY29wZSI6InJlZ2lzdHJhdGlvbiNnbG9iYWwgcmVnaXN0cmF0aW9uI2hvc3QifQ.
+    -bzw4ALZLuiw_n6eqlCSoRkRSn1k8yxUucdwyHAmE1U' | bash
 
 - name: Install Epel
   ansible.builtin.yum:
