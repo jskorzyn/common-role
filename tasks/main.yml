@@ -24,7 +24,6 @@
 
 - name: Add Epel Repo
   ansible.builtin.shell: rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-    
 
 # - name: Install Epel
 #   ansible.builtin.yum:
