@@ -18,7 +18,7 @@
 #     org_id: DemoLab
 
 - name: Register with Satellite template
-  ansible.builtin.shell: |
+  ansible.builtin.shell: >
     curl -sS --insecure 
     'https://satellite.redhat.lab/register?activation_keys=RHEL8_preprod&force=false&
     ignore_subman_errors=false&location_id=4&operatingsystem_id=1&
