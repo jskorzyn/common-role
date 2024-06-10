@@ -23,10 +23,4 @@
     executable: /bin/bash
 
 - name: Add Epel Repo
-  ansible.builtin.shell: rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-
-# - name: Install Epel
-#   ansible.builtin.yum:
-#     name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-#     state: present
-#     disable_gpg_check: true
+  ansible.builtin.command: rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
