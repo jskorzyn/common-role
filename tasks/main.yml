@@ -4,23 +4,11 @@
     name: "{{ inventory_hostname | default('change_me') }}.jsrh.redhat.lab"
     use: systemd
 
-# - name: Clear registration settings
-#   community.general.redhat_subscription:
-#     state: absent
-#     server_insecure: true
-
-# - name: Register to Sattellite with activation key
-#   community.general.redhat_subscription:
-#     state: present
-#     server_insecure: true
-#     force_register: true
-#     activationkey: RHEL8_preprod
-#     org_id: DemoLab
-
 - name: Register with Satellite template
   ansible.builtin.script: ./files/satreg.sh
   args:
     executable: /bin/bash
 
 - name: Add Epel Repo
-  ansible.builtin.command: rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+  ansible.builtin.shell: rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
